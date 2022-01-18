@@ -4,38 +4,37 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Flex: align self</title>
-      
-      <style>
-         body {
-            margin: 0;
-            padding: 0;
-         }
+      <title>Responsive Navbar</title>
 
-         .container {
-            display: flex;
-            flex-wrap: wrap;
-            border: 10px solid red;
-            margin: 0;
-            width: calc(100vw - 20px);
-            height: calc(100vh - 20px);
-         }
-            img {
-               margin: 10px;
-               width: 120px;
-               height: 70px;
-            }
-            .img2 {
-               align-self: flex-end;
-            }
-      </style>
+      <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+      <link rel="stylesheet" href="css/style.css" />
    </head>
 
    <body>
-      <div class="container">
-         <img class="img1" src="img/image.jpg" alt="Image" />
-         <img class="img2" src="img/image.jpg" alt="Image" />
-         <img class="img3" src="img/image.jpg" alt="Image" />
+      <div class="navbar">
+         <a class="toggle" id="navHamburger" href="#">
+            <i class="fas fa-bars"></i>
+         </a>
+         
+         <a class="brand" href="#">Alemany Puchol</a>
+         
+         <div class="left">
+            <a class="link" href="#">Link 1</a>
+            <a class="link" href="#">Link 2</a>
+         </div>
+         
+         <div class="right">
+            <a class="link" href="#">Link 3</a>
+         </div>
       </div>
    </body>
+
+   <script>
+      const navHamburger = document.querySelector('#navHamburger');
+      
+      navHamburger.addEventListener('click', (e) => {
+          navHamburger.parentElement.classList.toggle('active');
+      })
+   </script>
 </html>
